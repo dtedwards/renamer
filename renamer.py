@@ -2,11 +2,13 @@ import os
 from os import walk
 import zipfile
 
-#TO DO - add prompt asking for initial zip file name
 #TO DO - add unzip for the initial zip file
 
+#Ask user for the name of the folder containing the student zips
+input = input("What is the name of the folder?")
+
 #assignments folder
-folder = "../Week6HW/"
+folder = "../" + input + "/"
 
 def getFiles(folder):
     #Get all files
