@@ -1,8 +1,17 @@
+# Python3
+# This file is used to clean up, rename, and unzip assignments downloaded from D2L.
+# The user just needs to unzip the main zip file (and probably rename it).
+# Run python3 renamer.py
+# The user will be prompted for the folder name.
+# The script will delete the index.html file from D2L,
+# rename all of the student files, and unzip the .zips 
+
+# TO DO - add unzip for the initial zip file
+# TO DO - add .rar handling
+
 import os
 from os import walk
 import zipfile
-
-#TO DO - add unzip for the initial zip file
 
 #Ask user for the name of the folder containing the student zips
 input = input("What is the name of the folder?")
