@@ -21,11 +21,7 @@ folder = "../" + input + "/"
 
 def getFiles(folder):
     #Get all files
-    f = []
-    for (dirpath, dirnames, filenames) in walk(folder):
-        f.extend(filenames) #add the LIST of filenames to f
-        break
-    return f
+    return [filename for (_, _, filenames) in walk(folder) for filename in filenames]
 
 f = getFiles(folder)
 
