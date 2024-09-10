@@ -32,6 +32,7 @@ f = getFiles(folder)
 #for each file
 for e in f:
     #delete index.html
+    print(f)
     if e == "index.html":
         os.remove(folder + e)
 
@@ -47,7 +48,10 @@ for e in f:
         newFilename = folder + name[0] + name[1] + "." + type[1]
 
         #save file with new name
-        os.rename(oldFilename, newFilename)
+        try:
+            os.rename(oldFilename, newFilename)
+        except FileExistsError:
+            print(newFilename + " Exists")
 
 #get new list of files
 f = getFiles(folder)
